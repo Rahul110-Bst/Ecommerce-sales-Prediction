@@ -3,7 +3,11 @@ import pandas as pd
 import joblib
 
 # Load trained pipeline
-pipeline = joblib.load("../models/customer_churn_pipeline.pkl")
+from pathlib import Path
+
+MODEL_PATH = Path(__file__).resolve().parent.parent / "models" / "customer_churn_pipeline.pkl"
+
+pipeline = joblib.load(MODEL_PATH)
 
 st.set_page_config(
     page_title="Customer Churn Prediction",
@@ -129,7 +133,7 @@ if predict:
 
     probability = pipeline.predict_proba(input_data)[0]
 
-    if prediction == "Yes":
+    if prediction == 1:
         st.error("🔴 Customer is likely to Churn")
 
         st.write(

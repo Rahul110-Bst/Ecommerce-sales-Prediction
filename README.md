@@ -1,19 +1,24 @@
 # 📊 End-to-End E-commerce Customer Churn Prediction
 
-An end-to-end Machine Learning project that predicts whether an e-commerce customer is likely to churn based on demographic and service-related information. The project includes data preprocessing, feature engineering, model training, evaluation, and deployment using **Streamlit**.
+An end-to-end Machine Learning project that predicts whether an e-commerce customer is likely to churn based on customer demographics, subscribed services, contract details, and billing information.
+
+The project covers the complete Machine Learning workflow, including data preprocessing, feature engineering, model comparison, model evaluation, and deployment using **Streamlit**.
 
 ---
 
 # 🚀 Features
 
-* 📊 Customer Churn Prediction
-* 🤖 End-to-End Machine Learning Pipeline
-* 🧹 Automated Data Preprocessing
-* 🔄 Categorical Feature Encoding
-* 📈 Model Evaluation
-* 🌐 Interactive Streamlit Web Application
-* ⚡ Real-time Customer Prediction
-* 💾 Saved ML Pipeline using Joblib
+- 📊 Customer Churn Prediction
+- 🤖 End-to-End Machine Learning Pipeline
+- 🧹 Automated Data Preprocessing
+- 🔄 Missing Value Handling
+- 🔤 Categorical Feature Encoding
+- 📈 Model Comparison
+- 🎯 Best Model Selection
+- 💾 Saved ML Pipeline using Joblib
+- 🌐 Interactive Streamlit Web Application
+- ⚡ Real-Time Prediction
+- 📉 Churn Probability Prediction
 
 ---
 
@@ -21,32 +26,41 @@ An end-to-end Machine Learning project that predicts whether an e-commerce custo
 
 ## Programming Language
 
-* Python
+- Python
 
 ## Machine Learning
 
-* Scikit-learn
-* Random Forest Classifier
-* Pipeline
-* ColumnTransformer
+- Scikit-learn
+- Logistic Regression
+- Decision Tree Classifier
+- Random Forest Classifier
+- XGBoost Classifier
+- Pipeline
+- ColumnTransformer
 
 ## Data Analysis
 
-* Pandas
-* NumPy
+- Pandas
+- NumPy
 
-## Visualization
+## Data Preprocessing
 
-* Matplotlib
-* Seaborn
+- SimpleImputer
+- OneHotEncoder
+- StandardScaler
 
 ## Deployment
 
-* Streamlit
+- Streamlit
 
-## Model Saving
+## Model Serialization
 
-* Joblib
+- Joblib
+
+## Version Control
+
+- Git
+- GitHub
 
 ---
 
@@ -79,75 +93,103 @@ Ecommerce-Sales-Prediction/
 
 # 📈 Dataset
 
-Dataset: **Telco Customer Churn Dataset**
+**Dataset:** IBM Telco Customer Churn Dataset
 
-The dataset contains customer demographic details, subscribed services, billing information, and churn status.
+The dataset contains customer demographic information, subscribed services, contract details, billing information, and churn status.
 
-Example Features:
+### Features Used
 
-* Gender
-* Senior Citizen
-* Partner
-* Dependents
-* Tenure
-* Phone Service
-* Internet Service
-* Online Security
-* Online Backup
-* Device Protection
-* Tech Support
-* Streaming TV
-* Streaming Movies
-* Contract Type
-* Payment Method
-* Monthly Charges
-* Total Charges
+- Gender
+- Senior Citizen
+- Partner
+- Dependents
+- Tenure
+- Phone Service
+- Multiple Lines
+- Internet Service
+- Online Security
+- Online Backup
+- Device Protection
+- Tech Support
+- Streaming TV
+- Streaming Movies
+- Contract
+- Paperless Billing
+- Payment Method
+- Monthly Charges
+- Total Charges
+
+### Target Variable
+
+- Churn (Yes / No)
 
 ---
 
 # 🤖 Machine Learning Workflow
 
-* Data Cleaning
-* Missing Value Handling
-* Exploratory Data Analysis (EDA)
-* Feature Encoding
-* Pipeline Creation
-* Model Training
-* Model Evaluation
-* Model Serialization using Joblib
-* Streamlit Deployment
+- Data Cleaning
+- Missing Value Handling
+- Feature Selection
+- Data Preprocessing
+- Feature Scaling
+- Categorical Encoding
+- Pipeline Creation
+- Train-Test Split
+- Model Training
+- Model Evaluation
+- Model Comparison
+- Best Model Selection
+- Model Serialization
+- Streamlit Deployment
+
+---
+
+# 🧠 Machine Learning Models
+
+The following machine learning models were trained and evaluated:
+
+- Logistic Regression
+- Decision Tree Classifier
+- Random Forest Classifier
+- XGBoost Classifier
+
+After comparing all models, the **best-performing model** was selected and saved using **Joblib** for deployment.
 
 ---
 
 # 📊 Model Performance
 
-| Metric    |                    Value |
-| --------- | -----------------------: |
-| Algorithm | Random Forest Classifier |
-| Accuracy  |                  **78%** |
+| Model | Accuracy |
+|--------|----------|
+| Logistic Regression | **80.38%** |
+| Random Forest | 78.75% |
+| XGBoost | 76.90% |
+| Decision Tree | 73.06% |
+
+**Best Model:** Logistic Regression
 
 ---
 
 # 🌐 Streamlit Application
 
-The application allows users to:
+The Streamlit application allows users to:
 
-* Enter customer information
-* Predict churn in real time
-* View churn probability
-* Display prediction result instantly
+- Enter customer details
+- Predict customer churn instantly
+- View churn probability
+- Get real-time prediction results through a simple user interface
 
 ---
 
 # ⚙️ Installation
 
-Clone the repository
+## Clone the Repository
 
 ```bash
 git clone https://github.com/Rahul110-Bst/Ecommerce-sales-Prediction.git
 ```
 
-Move into the project
+Move into the project directory
 
 ```bash
 cd Ecommerce-Sales-Prediction
@@ -159,9 +201,9 @@ Create a virtual environment
 python -m venv .venv
 ```
 
-Activate the environment
+Activate the virtual environment
 
-**Windows**
+### Windows
 
 ```bash
 .venv\Scripts\activate
@@ -189,14 +231,39 @@ http://localhost:8501
 
 ---
 
+# 📷 Application Preview
+
+You can add screenshots of the Streamlit application here.
+
+Example:
+
+```text
+README Images/
+├── home.png
+├── prediction.png
+```
+
+Then use:
+
+```markdown
+![Home](images/home.png)
+
+![Prediction](images/prediction.png)
+```
+
+---
+
 # 📌 Future Improvements
 
-* SHAP Explainability
-* Batch Prediction using CSV Upload
-* Feature Importance Visualization
-* ROC Curve & Confusion Matrix
-* Model Comparison Dashboard
-* Cloud Deployment
+- SHAP Explainability
+- Batch Prediction using CSV Upload
+- Feature Importance Visualization
+- ROC Curve
+- Confusion Matrix Visualization
+- Hyperparameter Tuning
+- Cloud Deployment (Render / Streamlit Cloud)
+- Docker Support
+- REST API using FastAPI
 
 ---
 
@@ -210,13 +277,25 @@ GitHub: https://github.com/Rahul110-Bst
 
 # ⭐ Skills Demonstrated
 
-* Machine Learning
-* Data Preprocessing
-* Feature Engineering
-* Model Evaluation
-* Random Forest Classification
-* Scikit-learn Pipeline
-* Streamlit
-* Joblib
-* Git & GitHub
-* End-to-End ML Project Development
+- Machine Learning
+- Classification Algorithms
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- XGBoost
+- Data Preprocessing
+- Feature Engineering
+- Pipeline Creation
+- Model Evaluation
+- Model Comparison
+- Streamlit
+- Joblib
+- Git
+- GitHub
+- End-to-End ML Project Development
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
